@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="invoice.css" media="print" rel="stylesheet">
+    <title>Invoice</title>
+    <meta name="description" content="Invoice demo sample">
+  </head>
+
+  <body>
+    <h1>Invoice</h1>
+
+    <aside>
+      <address id="from">
+        Krzysztof Smykała
+        45-316 Opole
+        Poland
+      </address>
+
+      <address id="to">
+        Our awesome developers
+        From all around the world
+        Earth
+      </address>
+    </aside>
+
+    <dl id="informations">
+      <dt>Invoice number</dt>
+      <dd>12345</dd>
+      <dt>Date</dt>
+      <dd>invoice_date</dd>
+    </dl>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Coding services</td>
+          <td>€invoice_price</td>
+          <td>invoice_quantity</td>
+          <td>€invoice_total</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <table id="total">
+        <thead>
+          <tr>
+            <th>Due by</th>
+            <th>Account number</th>
+            <th>Total due</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>invoice_due_date</td>
+            <td>132 456 789 012</td>
+            <td>€invoice_total</td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
+  </body>
+</html>
