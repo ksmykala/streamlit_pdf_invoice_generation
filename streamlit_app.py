@@ -1,7 +1,7 @@
 import streamlit as st
-import weasyprint
+from weasyprint import HTML, CSS
+from weasyprint.text.fonts import FontConfiguration
 from datetime import datetime, timedelta
-import base64
 from pathlib import Path
 
 
@@ -58,10 +58,12 @@ def generate_inovice_pdf(invoice_details):
     invoice_content = generate_invoice_content(**invoice_details)
 
     pdf_filename = f'{PDF_OUTPUT_DIR}/invoice_{datetime.now().strftime("%Y%m%d%H%M%S")}.pdf'
-    html = weasyprint.HTML(string=invoice_content)
-    # TODO: use 
-    css = weasyprint.CSS(string=open(f'{PDF_TEMPLATE_DIR}/invoice.css').read())
-    html.write_pdf(pdf_filename, stylesheets=[css])
+    font_config = FontConfiguration()
+    html = HTML(string=invoice_content)
+    css = CSS(
+        string=open(f'{PDF_TEMPLATE_DIR}/invoice.css').read(),
+        font_config=font_config)
+    html.write_pdf(pdf_filename, stylesheets=[css], font_config=font_config)
 
     return Path(pdf_filename)
 

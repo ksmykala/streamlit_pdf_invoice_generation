@@ -1,16 +1,16 @@
 @font-face {
   font-family: Pacifico;
-  src: url(pacifico.ttf);
+  src: url(file:///app/assets/pacifico.ttf);
 }
 @font-face {
   font-family: Source Sans Pro;
   font-weight: 400;
-  src: url(sourcesanspro-regular.otf);
+  src: url(file:///app/assets/sourcesanspro-regular.otf);
 }
 @font-face {
   font-family: Source Sans Pro;
   font-weight: 700;
-  src: url(sourcesanspro-bold.otf);
+  src: url(file:///app/assets/sourcesanspro-bold.otf);
 }
 
 @page {
